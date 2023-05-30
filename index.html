@@ -4,65 +4,9 @@
     </head>
     <body>
 
-        <div style="white-space: pre-wrap;">
-Cash
 
-A game to be played in the vein of chess with some mods.
-The big difference is there is no check or mate.
-One must gain coin through the usual capture or,
-through moving their piece by moving onto the last rank.
-Players switch who goes first to give balance via two games.
-There are a total of a hundred coin per game, fifty to each player.
-Pieces have been labeled different but behave the same,
-with the exception of the step piece which reverses any one death,
-its coin, and returns said piece to that spot.
+<h1>Old Highscore</h1>
 
-Old Highscore will handle cash earned from playing games,
-and work to provide an area for future sagas and generations.
-
-
-piece{
-	1x8 step(Pawn) reverse any death on last rank, gain coin
-	3x2 leap(Knight)
-	3x2 diag(Bishop)
-	5x2 push(Rook)
-	9x1 bank(Queen)
-	11x1 keep(King)
-	50 coin
-}
-board{
-	b1 8x8
-	p1 2x8 8,10,12,9 = 39(chess total) + 11(new keep point) = 50 (cash total)
-	p2 2x8 8,9,10,11,12 = 50
-}
-point{
-	capture(p,p)	d4xd5
-	cash(p)		d7yd8 reach last rank to score piece
-	coin
-}
-rule{
-	clock 	typical time variants
-	cheat 	allow use of ai visual aids
-	death 	capture keep ends game, score their remaining pieces
-	purge 	agreed upon end with live points discarded
-}
-game{
-	players[1,2]
-	moves[]
-	points[]
-	rules[]
-}
-round{
-	board 	default 8x8 50v50 board, optional time
-	robin(pp) every one plays every one once as each side
-	scores[]	list of game results with points summed
-	tier		end result of the round stacking players against scores
-}
-saga{
-	players[]
-	rounds[]
-}
-        </div>
 
 <div>
 
